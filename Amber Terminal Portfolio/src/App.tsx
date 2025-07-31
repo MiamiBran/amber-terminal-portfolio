@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { useMemo, useEffect } from 'react';
 import themeSettings from './settings/theme';
 import { Theme } from './settings/types';
 import PortfolioTerminalPage from './components/generated/PortfolioTerminalPage.tsx';
@@ -12,7 +12,9 @@ function App() {
     }
   }
 
-  setTheme(themeSettings.theme);
+  useEffect(() => {
+    setTheme(themeSettings.theme);
+  }, []);
 
   const generatedComponent = useMemo(() => {
     // THIS IS WHERE THE TOP LEVEL GENRATED COMPONENT WILL BE RETURNED!
