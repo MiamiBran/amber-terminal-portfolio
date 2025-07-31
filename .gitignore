@@ -1,0 +1,6 @@
+# Ignore build outputs and dependency artifacts
+Amber Terminal Portfolio/dist/
+magicpath-project-4.zip
+.yarn/
+.pnp.cjs
+.pnp.loader.mjs
