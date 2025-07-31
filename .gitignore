@@ -1,0 +1,4 @@
+# Ignore Yarn Plug'n'Play files
+.pnp.cjs
+.pnp.loader.mjs
+.yarn/
