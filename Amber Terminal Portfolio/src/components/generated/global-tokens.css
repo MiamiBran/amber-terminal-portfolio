@@ -1,0 +1,385 @@
+/* ===================================
+   GLOBAL DESIGN TOKENS
+   ===================================
+   
+   This file contains all global design tokens as CSS variables.
+   These tokens define the core visual language of the application.
+   
+   Structure:
+   - Color Tokens
+   - Typography Tokens  
+   - Effect Tokens
+   - Spacing Tokens
+   - Border & Radius Tokens
+   - Animation Tokens
+   
+   ================================= */
+
+:root {
+  /* ===================================
+     COLOR TOKENS
+     ================================= */
+  
+  /* Primary Brand Colors */
+  --color-primary-orange: #FF6A00;
+  --color-primary-orange-light: #FF914D;
+  --color-primary-orange-dark: #CC5500;
+  --color-primary-orange-alpha-10: rgba(255, 106, 0, 0.1);
+  --color-primary-orange-alpha-20: rgba(255, 106, 0, 0.2);
+  --color-primary-orange-alpha-30: rgba(255, 106, 0, 0.3);
+  --color-primary-orange-alpha-50: rgba(255, 106, 0, 0.5);
+  --color-primary-orange-alpha-80: rgba(255, 106, 0, 0.8);
+  
+  /* Background Colors */
+  --color-background-primary: #0A0502;
+  --color-background-secondary: #1A1512;
+  --color-background-tertiary: #2A2522;
+  
+  /* Text Colors */
+  --color-text-primary: #FF6A00;
+  --color-text-secondary: rgba(255, 106, 0, 0.8);
+  --color-text-tertiary: rgba(255, 106, 0, 0.6);
+  --color-text-muted: rgba(255, 106, 0, 0.4);
+  
+  /* Border Colors */
+  --color-border-primary: #FF6A00;
+  --color-border-secondary: rgba(255, 106, 0, 0.3);
+  --color-border-tertiary: rgba(255, 106, 0, 0.2);
+  
+  /* State Colors */
+  --color-hover: #FF914D;
+  --color-focus: #FF914D;
+  --color-active: rgba(255, 106, 0, 0.2);
+  --color-disabled: rgba(255, 106, 0, 0.3);
+  
+  /* Semantic Colors */
+  --color-success: #00FF6A;
+  --color-warning: #FFAA00;
+  --color-error: #FF0066;
+  --color-info: #00AAFF;
+  
+  /* ===================================
+     TYPOGRAPHY TOKENS
+     ================================= */
+  
+  /* Font Families */
+  --font-family-primary: 'VT323', 'Space Mono', monospace;
+  --font-family-secondary: 'Space Mono', monospace;
+  --font-family-mono: 'VT323', monospace;
+  
+  /* Font Sizes */
+  --font-size-xs: 0.75rem;      /* 12px */
+  --font-size-sm: 0.875rem;     /* 14px */
+  --font-size-base: 1rem;       /* 16px */
+  --font-size-lg: 1.125rem;     /* 18px */
+  --font-size-xl: 1.25rem;      /* 20px */
+  --font-size-2xl: 1.5rem;      /* 24px */
+  --font-size-3xl: 1.875rem;    /* 30px */
+  --font-size-4xl: 2.25rem;     /* 36px */
+  --font-size-5xl: 3rem;        /* 48px */
+  --font-size-6xl: 3.75rem;     /* 60px */
+  --font-size-7xl: 4.5rem;      /* 72px */
+  
+  /* Font Weights */
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  
+  /* Line Heights */
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.625;
+  --line-height-loose: 2;
+  
+  /* Letter Spacing */
+  --letter-spacing-tight: -0.025em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.025em;
+  --letter-spacing-wider: 0.05em;
+  --letter-spacing-widest: 0.1em;
+  
+  /* ===================================
+     EFFECT TOKENS
+     ================================= */
+  
+  /* Shadows */
+  --shadow-glow-sm: 0 0 4px var(--color-primary-orange);
+  --shadow-glow-md: 0 0 8px var(--color-primary-orange);
+  --shadow-glow-lg: 0 0 12px var(--color-primary-orange);
+  --shadow-glow-xl: 0 0 16px var(--color-primary-orange);
+  --shadow-glow-2xl: 0 0 24px var(--color-primary-orange);
+  
+  /* Text Shadows */
+  --text-shadow-glow-sm: 0 0 4px var(--color-primary-orange);
+  --text-shadow-glow-md: 0 0 8px var(--color-primary-orange);
+  --text-shadow-glow-lg: 0 0 12px var(--color-primary-orange);
+  --text-shadow-glow-xl: 0 0 20px var(--color-primary-orange), 0 0 40px var(--color-primary-orange);
+  
+  /* Drop Shadows */
+  --drop-shadow-glow-sm: drop-shadow(0 0 4px var(--color-primary-orange));
+  --drop-shadow-glow-md: drop-shadow(0 0 8px var(--color-primary-orange));
+  --drop-shadow-glow-lg: drop-shadow(0 0 12px var(--color-primary-orange));
+  --drop-shadow-glow-xl: drop-shadow(0 0 16px var(--color-primary-orange));
+  
+  /* Box Shadows (Combined) */
+  --box-shadow-terminal: 0 0 12px rgba(255, 106, 0, 0.2), inset 0 0 12px rgba(255, 106, 0, 0.1);
+  --box-shadow-console: 0 0 24px rgba(255, 106, 0, 0.3), inset 0 0 24px rgba(255, 106, 0, 0.1);
+  --box-shadow-button: 0 0 8px rgba(255, 106, 0, 0.3);
+  --box-shadow-card: 0 0 16px rgba(255, 106, 0, 0.2);
+  
+  /* Blur Effects */
+  --blur-sm: blur(4px);
+  --blur-md: blur(8px);
+  --blur-lg: blur(16px);
+  --blur-xl: blur(24px);
+  
+  /* ===================================
+     SPACING TOKENS
+     ================================= */
+  
+  /* Base Spacing Scale */
+  --space-0: 0;
+  --space-1: 0.25rem;    /* 4px */
+  --space-2: 0.5rem;     /* 8px */
+  --space-3: 0.75rem;    /* 12px */
+  --space-4: 1rem;       /* 16px */
+  --space-5: 1.25rem;    /* 20px */
+  --space-6: 1.5rem;     /* 24px */
+  --space-8: 2rem;       /* 32px */
+  --space-10: 2.5rem;    /* 40px */
+  --space-12: 3rem;      /* 48px */
+  --space-16: 4rem;      /* 64px */
+  --space-20: 5rem;      /* 80px */
+  --space-24: 6rem;      /* 96px */
+  --space-32: 8rem;      /* 128px */
+  
+  /* Semantic Spacing */
+  --space-section-sm: var(--space-16);   /* 64px */
+  --space-section-md: var(--space-24);   /* 96px */
+  --space-section-lg: var(--space-32);   /* 128px */
+  
+  /* ===================================
+     BORDER & RADIUS TOKENS
+     ================================= */
+  
+  /* Border Widths */
+  --border-width-thin: 1px;
+  --border-width-normal: 2px;
+  --border-width-thick: 3px;
+  --border-width-heavy: 4px;
+  
+  /* Border Radius */
+  --radius-none: 0;
+  --radius-sm: 0.125rem;   /* 2px */
+  --radius-md: 0.25rem;    /* 4px */
+  --radius-lg: 0.5rem;     /* 8px */
+  --radius-xl: 0.75rem;    /* 12px */
+  --radius-2xl: 1rem;      /* 16px */
+  --radius-full: 9999px;
+  
+  /* ===================================
+     ANIMATION TOKENS
+     ================================= */
+  
+  /* Duration */
+  --duration-fast: 150ms;
+  --duration-normal: 300ms;
+  --duration-slow: 500ms;
+  --duration-slower: 800ms;
+  --duration-slowest: 1200ms;
+  
+  /* Easing Functions */
+  --ease-linear: linear;
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --ease-terminal: cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Animation Delays */
+  --delay-none: 0ms;
+  --delay-short: 100ms;
+  --delay-medium: 200ms;
+  --delay-long: 500ms;
+  
+  /* ===================================
+     Z-INDEX TOKENS
+     ================================= */
+  
+  --z-index-base: 0;
+  --z-index-dropdown: 10;
+  --z-index-sticky: 20;
+  --z-index-fixed: 30;
+  --z-index-modal-backdrop: 40;
+  --z-index-modal: 50;
+  --z-index-popover: 60;
+  --z-index-tooltip: 70;
+  --z-index-toast: 80;
+  --z-index-overlay: 90;
+  --z-index-max: 9999;
+  
+  /* ===================================
+     LAYOUT TOKENS
+     ================================= */
+  
+  /* Container Widths */
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+  --container-2xl: 1536px;
+  --container-max: 1600px;
+  
+  /* Breakpoints (for reference in JS) */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+  
+  /* ===================================
+     TERMINAL SPECIFIC TOKENS
+     ================================= */
+  
+  /* CRT Effects */
+  --crt-scanline-opacity: 0.05;
+  --crt-scanline-size: 2px;
+  --crt-scanline-gap: 2px;
+  --crt-flicker-duration: 0.1s;
+  --crt-flicker-delay-min: 2s;
+  --crt-flicker-delay-max: 5s;
+  
+  /* Terminal Colors */
+  --terminal-green: #00FF41;
+  --terminal-amber: #FFB000;
+  --terminal-red: #FF4136;
+  --terminal-blue: #0074D9;
+  --terminal-cyan: #7FDBFF;
+  --terminal-magenta: #B10DC9;
+  
+  /* Console Specific */
+  --console-border-glow: 0 0 8px rgba(255, 106, 0, 0.3);
+  --console-text-glow: 0 0 4px var(--color-primary-orange);
+  --console-background: rgba(255, 106, 0, 0.05);
+  
+  /* Progress Bar */
+  --progress-fill-char: '▓';
+  --progress-empty-char: '░';
+  --progress-bar-height: 1.5rem;
+  
+  /* ===================================
+     ACCESSIBILITY TOKENS
+     ================================= */
+  
+  /* Focus States */
+  --focus-ring-width: 2px;
+  --focus-ring-offset: 2px;
+  --focus-ring-color: var(--color-primary-orange);
+  --focus-ring-opacity: 0.5;
+  
+  /* High Contrast Mode Support */
+  --high-contrast-border: 2px solid;
+  --high-contrast-outline: 2px solid;
+  
+  /* Motion Preferences */
+  --motion-reduce-duration: 0.01ms;
+  --motion-reduce-delay: 0.01ms;
+}
+
+/* ===================================
+   RESPONSIVE DESIGN TOKENS
+   ================================= */
+
+/* Mobile First Approach - Base tokens are for mobile */
+@media (min-width: 640px) {
+  :root {
+    /* Tablet adjustments */
+    --font-size-4xl: 2.5rem;    /* 40px */
+    --font-size-5xl: 3.5rem;    /* 56px */
+    --font-size-6xl: 4rem;      /* 64px */
+    --font-size-7xl: 5rem;      /* 80px */
+    
+    --space-section-sm: var(--space-20);   /* 80px */
+    --space-section-md: var(--space-32);   /* 128px */
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    /* Desktop adjustments */
+    --font-size-4xl: 3rem;      /* 48px */
+    --font-size-5xl: 4rem;      /* 64px */
+    --font-size-6xl: 4.5rem;    /* 72px */
+    --font-size-7xl: 6rem;      /* 96px */
+    
+    --space-section-md: var(--space-32);   /* 128px */
+    --space-section-lg: 10rem;             /* 160px */
+  }
+}
+
+/* ===================================
+   REDUCED MOTION SUPPORT
+   ================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast: var(--motion-reduce-duration);
+    --duration-normal: var(--motion-reduce-duration);
+    --duration-slow: var(--motion-reduce-duration);
+    --duration-slower: var(--motion-reduce-duration);
+    --duration-slowest: var(--motion-reduce-duration);
+    
+    --delay-short: var(--motion-reduce-delay);
+    --delay-medium: var(--motion-reduce-delay);
+    --delay-long: var(--motion-reduce-delay);
+    
+    /* Disable flicker effects for reduced motion */
+    --crt-flicker-duration: 0s;
+  }
+}
+
+/* ===================================
+   HIGH CONTRAST MODE SUPPORT
+   ================================= */
+
+@media (prefers-contrast: high) {
+  :root {
+    /* Increase contrast for better accessibility */
+    --color-text-secondary: var(--color-text-primary);
+    --color-text-tertiary: rgba(255, 106, 0, 0.9);
+    --color-border-secondary: var(--color-border-primary);
+    --color-border-tertiary: rgba(255, 106, 0, 0.6);
+    
+    /* Stronger shadows for high contrast */
+    --shadow-glow-sm: var(--shadow-glow-md);
+    --shadow-glow-md: var(--shadow-glow-lg);
+    --shadow-glow-lg: var(--shadow-glow-xl);
+  }
+}
+
+/* ===================================
+   PRINT STYLES
+   ================================= */
+
+@media print {
+  :root {
+    /* Remove glow effects for print */
+    --shadow-glow-sm: none;
+    --shadow-glow-md: none;
+    --shadow-glow-lg: none;
+    --shadow-glow-xl: none;
+    --shadow-glow-2xl: none;
+    
+    --text-shadow-glow-sm: none;
+    --text-shadow-glow-md: none;
+    --text-shadow-glow-lg: none;
+    --text-shadow-glow-xl: none;
+    
+    /* Simplify colors for print */
+    --color-background-primary: #ffffff;
+    --color-text-primary: #000000;
+    --color-border-primary: #000000;
+  }
+}
